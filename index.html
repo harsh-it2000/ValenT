@@ -263,6 +263,28 @@
                     button.remove();
                 }
             });
+
+            // Create the "Open Valentine's Idea" button
+            const openValenIdeaButton = document.createElement('button');
+            openValenIdeaButton.textContent = "Cheers to our Memories";
+            openValenIdeaButton.style.position = "absolute";
+            openValenIdeaButton.style.top = "150px";
+            openValenIdeaButton.style.height = "60px";
+            openValenIdeaButton.style.width = "200px";
+            openValenIdeaButton.style.fontSize = "20px";
+            openValenIdeaButton.style.backgroundColor = "#FF1493"; 
+            openValenIdeaButton.style.color = "white";
+            openValenIdeaButton.style.border = "none";
+            openValenIdeaButton.style.borderRadius = "10px";
+            openValenIdeaButton.style.cursor = "pointer";
+
+            // Add event listener to open valenIdea.html
+            openValenIdeaButton.addEventListener('click', function() {
+                window.location.href = 'valenIdea.html';
+            });
+
+            // Append the button to the document
+            document.body.appendChild(openValenIdeaButton);
         }
     
         function spawnYesButton() {
