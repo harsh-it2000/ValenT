@@ -165,7 +165,7 @@
           </div>
     </div>
     <div class="containerLanding" onclick="revealLetter()">
-        <audio autoplay loop>
+        <audio id="bgMusic" loop muted>
             <source src="./src/music.mp3" type="audio/mpeg">
         </audio>
         <img style = "position: absolute; right: 20px; width: 75px; height: 75px;" src="./src/stamp.png" alt="">
@@ -178,6 +178,12 @@
         </div>
     </div>
     <script>
+
+        document.addEventListener("click", function () {
+            let audio = document.getElementById("bgMusic");
+            audio.muted = false;
+            audio.play();
+        }, { once: true }); // Ensures this runs only once
 
         function createHeart() {
             const heart = document.createElement("div");
